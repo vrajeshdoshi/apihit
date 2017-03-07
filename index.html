@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<script>
+	$.ajax({
+url:"https://maps.googleapis.com/maps/api/directions/json?origin=Adelaide,SA&destination=Adelaide,SA&waypoints=optimize:true|Barossa+Valley,SA|Clare,SA|Connawarra,SA|McLaren+Vale,SA&key=AIzaSyCHGMjbOuBg8O-c_LzWO5mkmlZpD15pYH8",
+	type:"GET",
+	dataType: 'json',
+	success: function(respond){
+		alert(respond.status);
+	console.log("AJAX level request was successful");
+	},
+	error: function(){
+	console.log("AJAX level request was a failure");
+	}
+	
+});
+
+		</script>
+	</body>
+</html>
